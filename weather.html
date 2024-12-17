@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="./weather.css">
+<div id="location">
+  <select id="regionSelect">
+    <option value="014100">北海道・札幌</option>
+    <option value="130000">東京</option>
+    <option value="110000">埼玉</option>
+    <option value="">沖縄</option>
+    <!-- 必要な地域を追加 -->
+  </select>
+  <a href="https://www.jma.go.jp/bosai/forecast/" target="_blank">気象庁のデータを元に作成</a>
+</div>
+<div class="weatherForecast">
+  <div class="weather">
+    <div class="date">--/--(-)</div>
+    <img class="weatherImg">
+    <div class="weatherTelop">--</div>
+    <div><span class="tempMin">-℃</span>/<span class="tempMax">-℃</span></div>
+  </div>
+</div>
+<script>
+  for (let i = 0; i < 2; i++) {
+    const el = document.querySelector('.weather').cloneNode(true);
+    document.querySelector('.weatherForecast').appendChild(el);
+  }
+</script>
+<script src="./weather.js"></script>
